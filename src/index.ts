@@ -1,4 +1,5 @@
 import { 
+    GraphQLExecutionResult,
     GraphQLServer, 
     JsonLogger 
 } from '@dreamit/graphql-server'
@@ -12,7 +13,7 @@ const graphqlServer = new GraphQLServer(
     {
         schema: userSchema,
         rootValue: userSchemaResolvers,
-        logger: new JsonLogger('fastifyServer', 'user-service')
+        logger: new JsonLogger('hapi-server', 'user-service')
     }
 )
 
@@ -24,11 +25,29 @@ async function init(): Promise<void> {
     })
 
     server.route({
-        method: 'GET',
+        method: 'POST',
         path: '/graphql',
         handler: async(request, h) => {
-            // TODO: Try this when executeRequest function is available            
-            return 'Hello world'
+            const result: GraphQLExecutionResult = await graphqlServer.handleRequest({
+                url: request.url.href,
+                headers: request.headers,
+                body: request.payload,
+                method: request.method.toUpperCase()
+            })
+            let response = h.response(result.executionResult)
+            if (result.statusCode) {
+                response = response.code(result.statusCode)
+            }
+
+            const customHeaders =  result.customHeaders
+            let headerValue
+            for (const headerName in customHeaders) {
+                headerValue = customHeaders[headerName]
+                if (headerName) {
+                    response = response.header(headerName, headerValue)
+                }
+            }
+            return response
         }
     })
 
