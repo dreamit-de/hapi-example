@@ -20,7 +20,7 @@
   "homepage": "https://github.com/sgohlke/hapi-example#readme",
   "devDependencies": {
     "@sgohlke/ts-base-dependencies": "1.0.19",
-    "@types/hapi": "18.0.10"
+    "@types/hapi": "18.0.11"
   },
   "dependencies": {
     "@dreamit/graphql-server": "4.2.7",
