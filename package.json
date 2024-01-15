@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/sgohlke/hapi-example#readme",
   "devDependencies": {
-    "@sgohlke/ts-base-dependencies": "1.0.23",
+    "@sgohlke/ts-base-dependencies": "1.0.24",
     "@types/hapi": "18.0.14"
   },
   "dependencies": {
