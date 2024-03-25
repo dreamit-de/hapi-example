@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@dreamit/graphql-server": "4.8.0",
-    "@hapi/hapi": "21.3.6",
+    "@hapi/hapi": "21.3.7",
     "graphql": "16.8.1"
   }
 }
