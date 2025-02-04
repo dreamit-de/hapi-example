@@ -6,7 +6,7 @@ import {GraphQLExecutionResult} from '@dreamit/graphql-server-base'
 import { 
     userSchema, 
     userSchemaResolvers 
-} from './ExampleSchemas'
+} from '@dreamit/graphql-testing'
 import Hapi from '@hapi/hapi'
 
 const graphqlServer = new GraphQLServer(
