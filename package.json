@@ -23,7 +23,7 @@
   "devDependencies": {
     "@types/hapi": "18.0.14",
     "@types/node": "22.13.10",
-    "oxlint": "0.15.13",
+    "oxlint": "0.16.0",
     "typescript": "5.8.2"
   },
   "dependencies": {
