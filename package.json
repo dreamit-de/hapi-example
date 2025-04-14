@@ -22,8 +22,8 @@
   "homepage": "https://github.com/sgohlke/hapi-example#readme",
   "devDependencies": {
     "@types/hapi": "18.0.14",
-    "@types/node": "22.14.0",
-    "oxlint": "0.16.4",
+    "@types/node": "22.14.1",
+    "oxlint": "0.16.5",
     "typescript": "5.8.3"
   },
   "dependencies": {
