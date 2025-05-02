@@ -27,8 +27,9 @@
     "typescript": "5.8.3"
   },
   "dependencies": {
-    "@dreamit/graphql-server": "4.13.3",
-    "@dreamit/graphql-testing": "0.2.0",
+    "@dreamit/graphql-server": "file:dreamit-graphql-server-5.0.0.tgz",
+    "@dreamit/graphql-server-base": "file:dreamit-graphql-server-base-3.0.0.tgz",
+    "@dreamit/graphql-testing": "file:dreamit-graphql-testing-1.0.0.tgz",
     "@hapi/hapi": "21.4.0",
     "graphql": "16.11.0"
   }
